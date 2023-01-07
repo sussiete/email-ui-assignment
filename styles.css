@@ -9,9 +9,6 @@ body{
     height: 150px;
     border-radius: 75px;
     text-align: center;
-    font-size: 2.5vh;
-    margin-right: 22px;
-    margin-top: 15px;
     border-style: solid;
     border-color: rgb(194, 194, 194);
     border-width: .2rem;
@@ -32,6 +29,7 @@ body{
     font-size: 25px;
     font-weight: bold;
     background-color: rgba(87, 87, 87, 0.146);
+    overflow: hidden;
 }
 
 .heading-text{
@@ -55,8 +53,169 @@ body{
     height: 50%;
     border-radius: 2.5%;
     background-color: rgba(79, 76, 91, 0.372);
+    overflow: hidden;
 }
 
 html{
     background-color: rgb(64, 61, 74);
+}
+
+@media (min-width: 300px){
+    .msg-input-field{
+        width: 95vw;
+    }
+
+    .navbar-brand{
+        display: none;
+    }
+    .current-message{
+        display: none;
+    }
+    
+   
+    .card-title{font-size: 12px;} 
+    .card-subtitle{font-size: 11px;} 
+    .card-text{font-size: 10px;}
+    .card-link{font-size: 10px;}
+
+    .heading{
+        font-size: 18px;
+    }
+    .heading-text{
+        font-size: 13px;
+    }
+
+    .inbox-icon{
+        background-color: rgba(110, 67, 67, 0.375);
+        width: 13vw;
+        height: 7vw;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 2vw;
+        border-style: solid;
+        border-color: rgb(194, 194, 194);
+        border-width: .1vw;
+        color: rgba(255, 255, 255, 0.898);
+        font-size: 2vw;
+    }
+
+    .list-group{
+        overflow: scroll;
+        height: 50vh;
+    }
+
+   
+}
+
+@media (min-width: 768px){
+
+    p{
+        font-size: 5px;
+    }
+
+    .card{
+        font-size: smaller;
+        width: 29vw;       
+    }
+    .card-title{font-size: smaller;} 
+    .card-subtitle{font-size: smaller;} 
+    .card-text{font-size: smaller;}
+    
+    .heading{
+        font-size: 18px;
+    }
+    .heading-text{
+        font-size: 13px;
+    }
+
+    .inbox-icon{
+        background-color: rgba(110, 67, 67, 0.375);
+        width: 7vw;
+        height: 7vw;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 1vw;
+        border-style: solid;
+        border-color: rgb(194, 194, 194);
+        border-width: .1vw;
+        color: rgba(255, 255, 255, 0.898);
+        font-size: 1.5vw;
+    }
+
+    .navbar-brand{
+        display: inline;
+    }
+    .current-message{
+        display: inline;
+        display: block;
+    }
+
+    .list-group{
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    .msg-input-field{
+        width: auto;
+    }
+    
+}
+
+@media (min-width: 900px){
+   p{
+    font-size: 16px;
+   }
+   
+    .card{
+        font-size: 16px;
+        width: 20.5vw;
+    }
+    .card-title{font-size: 16px;} 
+    .card-subtitle{font-size: 16px;} 
+    .card-text{font-size: 16px;}
+
+    .inbox-icon{
+        background-color: rgba(110, 67, 67, 0.375);
+        width: 7vw;
+        height: 7vw;
+        border-radius: 50%;
+        text-align: center;
+       
+        border-style: solid;
+        border-color: rgb(194, 194, 194);
+        border-width: .1vw;
+        color: rgba(255, 255, 255, 0.898);
+        font-size: 2vw;
+        position: static;
+    }
+    .heading{
+        color: rgba(255, 255, 255, 0.91);
+        margin-left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        background-color: rgba(87, 87, 87, 0.146);
+        overflow: hidden;
+    }
+    
+    .heading-text{
+        font-size: 16px;
+    }
+
+    .navbar-brand{
+        display: inline;
+        display: block;
+    }
+    .current-message{
+        display: inline;
+        display: block;
+    }
+
+    .list-group{
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    .msg-input-field{
+        width: auto;
+    }
 }
