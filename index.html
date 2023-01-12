@@ -14,8 +14,37 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
     </style>
+    <script src="https://kit.fontawesome.com/5f275b4cf8.js" crossorigin="anonymous"></script>
   </head>
 <body>
+  <script>
+    let currMsg = document.getElementById("current-message")
+
+    const onClick = (event) => {
+      let msgClass = event.target.getAttribute('class');
+      console.log(msgClass);
+      let heading;
+      let subheading;
+      let headingText
+      if(msgClass == "card-body"){
+        heading = document.getElementById("card-title").innerText;
+        subheading = document.getElementById("card-subtitle").innerText;
+        headingText = document.getElementById("card-text").innerText;
+        document.getElementById("heading").innerText = `${heading}`;
+        document.getElementById("subheading").innerText = `${subheading}`;
+        document.getElementById("heading-text").innerText = `${headingText}`;
+        //alert(event.target.innerText);
+        
+        //document.getElementById("heading").innerText = `${event.target.innerText}`;
+        //document.getElementById("heading-text").innerText = `${event.target.innerText}`;
+      }
+        //alert(event.target.innerHTML);
+        //document.getElementById("current-message").innerHTML = `${event.target.innerHTML}`; 
+        //document.getElementById("heading-text").innerText = `${event.target.innerText}`; 
+      
+    }
+    window.addEventListener('click',onClick);
+  </script>
     <!--create container-->
     <div class="container-fluid">
         <!--make a row w/width 100-->
@@ -24,10 +53,10 @@
             <div class="col-lg-2 col-md-2 col-sm-2 col-4" style="background-color: rgb(64, 61, 74);">
               <h1 class="title">Süsmail</h1>
                 <nav class="nav nav-pills flex-column" style="background-color: rgba(102, 93, 126, 0.148);">
-                    <a class="nav-link active" aria-current="Inbox" href="#">Inbox</a>
-                    <a class="nav-link" href="">Sent</a>
-                    <a class="nav-link" href="">Draft</a>
-                    <a class="nav-link" href="">Trash</a>
+                    <a class="nav-link active" aria-current="Inbox" href="#"><i class="fa-solid fa-inbox"></i> Inbox</a>
+                    <a class="nav-link" href=""><i class="fa-regular fa-paper-plane"></i> Sent</a>
+                    <a class="nav-link" href=""><i class="fa-regular fa-clipboard"></i> Draft</a>
+                    <a class="nav-link" href=""><i class="fa-regular fa-trash-can"></i> Trash</a>
                 </nav>
                 <div class="button-group d-flex justify-content-center">
                   <div class="btn btn-outline-light" style="margin-top: 10px;">compose</div>
@@ -44,11 +73,11 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-end align-items-center justify-content-around" style="background-color: rgb(64, 61, 74);">
                       <div class="inbox-icon d-flex align-items-center justify-content-center">ü</div>   
-                        <div class="card">
+                        <div class="card" id="card">
                             <div class="card-body">
-                              <h5 class="card-title">Sub: Assignment Due</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">from: bayvalleytech@susmail.com</h6>
-                              <p class="card-text">Jesus, please respond as quickly as possible. There is a shortage of web developers and we need your help.</p>
+                              <h5 class="card-title" id="card-title">Sub: Welcome To SUSMAIL!</h5>
+                              <h6 class="card-subtitle mb-2 text-muted" id="card-subtitle">from: welcomingteam@susmail.com</h6>
+                              <p class="card-text" id="card-text">Jesus, please respond as quickly as possible. There is a shortage of web developers and we need your help.</p>
                               <a href="#" class="card-link">forward</a>
                               <a href="#" class="card-link">reply</a>
                             </div>
@@ -56,11 +85,11 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-end align-items-center justify-content-around" style="background-color: rgb(64, 61, 74);">
                       <div class="inbox-icon d-flex align-items-center justify-content-center">ü</div>   
-                        <div class="card">
+                        <div class="card" id="card">
                             <div class="card-body">
-                              <h5 class="card-title">Sub: Assignment Due</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">from: bayvalleytech@susmail.com</h6>
-                              <p class="card-text">Jesus, please respond as quickly as possible. There is a shortage of web developers and we need your help.</p>
+                              <h5 class="card-title" id="card-title">Sub: Welcome To SUSMAIL!</h5>
+                              <h6 class="card-subtitle mb-2 text-muted" id="card-subtitle">from: welcomingteam@susmail.com</h6>
+                              <p class="card-text" id="card-text">Jesus, please respond as quickly as possible. There is a shortage of web developers and we need your help.</p>
                               <a href="#" class="card-link">forward</a>
                               <a href="#" class="card-link">reply</a>
                             </div>
@@ -68,11 +97,11 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-end align-items-center justify-content-around" style="background-color: rgb(64, 61, 74);">
                       <div class="inbox-icon d-flex align-items-center justify-content-center">ü</div>   
-                        <div class="card">
+                        <div class="card" id="card">
                             <div class="card-body">
-                              <h5 class="card-title">Sub: Assignment Due</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">from: bayvalleytech@susmail.com</h6>
-                              <p class="card-text">Jesus, please respond as quickly as possible. There is a shortage of web developers and we need your help.</p>
+                              <h5 class="card-title" id="card-title">Sub: Welcome To SUSMAIL!</h5>
+                              <h6 class="card-subtitle mb-2 text-muted" id="card-subtitle">from: welcomingteam@susmail.com</h6>
+                              <p class="card-text" id="card-text">Jesus, please respond as quickly as possible. There is a shortage of web developers and we need your help.</p>
                               <a href="#" class="card-link">forward</a>
                               <a href="#" class="card-link">reply</a>
                             </div>
@@ -80,11 +109,11 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-end align-items-center justify-content-around" style="background-color: rgb(64, 61, 74);">
                       <div class="inbox-icon d-flex align-items-center justify-content-center">ü</div>   
-                        <div class="card">
+                        <div class="card" id="card">
                             <div class="card-body">
-                              <h5 class="card-title">Sub: Assignment Due</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">from: bayvalleytech@susmail.com</h6>
-                              <p class="card-text">Jesus, please respond as quickly as possible. There is a shortage of web developers and we need your help.</p>
+                              <h5 class="card-title" id="card-title">Sub: Welcome To SUSMAIL!</h5>
+                              <h6 class="card-subtitle mb-2 text-muted" id="card-subtitle">from: welcomingteam@susmail.com</h6>
+                              <p class="card-text" id="card-text">Jesus, please respond as quickly as possible. There is a shortage of web developers and we need your help.</p>
                               <a href="#" class="card-link">forward</a>
                               <a href="#" class="card-link">reply</a>
                             </div>
@@ -100,10 +129,13 @@
                   <span class="navbar-brand mb-0 h1" style="color: white;">Welcome Back, Jesus</span>
                 </div>
               </nav>
-              <div class="current-message" style="margin-bottom: 10px;">
-                <p class="heading">Sub: Assignment Due Soon!<br>From: veryrealuser@süsmail.com
+              <div class="current-message" id="current-message" style="margin-bottom: 10px;">
+                <p class="heading" id="heading">Sub: Assignment Due Soon!
                 </p>
-                <p class="heading-text" style="margin-left: 10px;">
+                <p class="heading" id="subheading">
+                  From: veryrealuser@süsmail.com
+                </p>
+                <p class="heading-text" id="heading-text" style="margin-left: 10px;">
                   Dear User, 
 
                   I am emailing you to let you know that your email ui assingment is due soon! Please begin making your final adustments and proceed to
@@ -117,6 +149,8 @@
                 <span class="input-group-text" style="background-color: rgb(78, 74, 93); color: white; border-style: groove;">New Message</span>
               <textarea class="form-control text-field" placeholder="start new message..." aria-label="new message text area" style="height: 300px;"></textarea>
               <button class="btn btn-outline-light" style="margin-top: 10px;">send</button>
+              <button class="btn btn-outline-light" style="margin-top: 10px;">attach file <i class="fa-solid fa-paperclip"></i></button>
+              <button class="btn btn-outline-light" style="margin-top: 10px;"> discard <i class="fa-solid fa-trash"></i></button>
               </div>
               
             </div>

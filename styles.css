@@ -60,6 +60,17 @@ html{
     background-color: rgb(64, 61, 74);
 }
 
+@media (any-hover:hover) {
+    .card:hover{
+        background-color: rgba(255, 255, 255, 0.839)
+    }
+    
+}
+
+@media (pointer: coarse) {
+    
+}
+
 @media (min-width: 300px){
     .msg-input-field{
         width: 95vw;
@@ -103,7 +114,6 @@ html{
         overflow: scroll;
         height: 50vh;
     }
-
    
 }
 
